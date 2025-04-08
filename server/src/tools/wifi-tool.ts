@@ -37,7 +37,8 @@ const wifiConfigData = {
 export const registerWifiTools = (server: McpServer): void => {
   // Enable/disable a WiFi network
   server.tool(
-    "toggle-wifi-network", 
+    "toggle-wifi-network",
+    "Toggle the enabled state of a WiFi network",
     { 
       networkId: z.string(),
       enabled: z.boolean()
@@ -67,6 +68,7 @@ export const registerWifiTools = (server: McpServer): void => {
   // Update WiFi network configuration
   server.tool(
     "update-wifi-config", 
+    "Update the configuration of a WiFi network",
     { 
       networkId: z.string(),
       ssid: z.string().optional(),
@@ -109,6 +111,7 @@ export const registerWifiTools = (server: McpServer): void => {
   // Create a new WiFi network
   server.tool(
     "create-wifi-network", 
+    "Create a new WiFi network",
     { 
       id: z.string(),
       ssid: z.string(),

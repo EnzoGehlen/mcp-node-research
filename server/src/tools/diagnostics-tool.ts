@@ -39,6 +39,7 @@ export const registerDiagnosticsTools = (server: McpServer): void => {
   // Run speed test
   server.tool(
     "run-speed-test", 
+    "Run an internet speed test",
     {}, 
     async () => {
       console.log(`[TOOL CALL] run-speed-test - Running internet speed test`);
@@ -65,6 +66,7 @@ export const registerDiagnosticsTools = (server: McpServer): void => {
   // Ping a host
   server.tool(
     "ping-host", 
+    "Ping a host to check network connectivity",
     { 
       host: z.string()
     }, 
@@ -97,6 +99,7 @@ export const registerDiagnosticsTools = (server: McpServer): void => {
   // Check DNS resolution
   server.tool(
     "check-dns", 
+    "Check DNS resolution for a domain",
     { 
       domain: z.string()
     }, 
@@ -129,6 +132,7 @@ export const registerDiagnosticsTools = (server: McpServer): void => {
   // Restart router (simulation)
   server.tool(
     "restart-router", 
+    "Restart the router",
     { 
       force: z.boolean().default(false)
     }, 
