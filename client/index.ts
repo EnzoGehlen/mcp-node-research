@@ -37,7 +37,7 @@ async function main() {
     messages.push({ role: "user", content: userInput });
 
     const result = streamText({
-      system: "Você é um assistente muito inteligente e prestativo.",
+      system: "You are a helpful assistant.",
       model: anthropic("claude-3-5-sonnet-latest"),
       tools: await tools,
       maxSteps: 10,
